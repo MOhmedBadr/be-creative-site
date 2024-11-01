@@ -1,117 +1,108 @@
-
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
-a{
+
+/* Link styles */
+a {
     text-decoration: none;
-    color:#2d465e;
+    color: #2d465e;
 }
-a:hover{
+a:hover {
     color: #34bf49;
     transition: 0.3s;
 }
-.hone{
-    padding:50px;
-    height: 780px;
-    padding-left: 150px;
-}
 
-#active{
-    margin-right: 250px;
+/* Navbar */
+.hone {
+    padding: 50px;
+    padding-top: 80px; /* For spacing on mobile */
 }
-
+#active {
+    margin-right: auto;
+}
 .bg-custom {
     background-color: white;
 }
-.nav-link{
+.nav-link {
     margin-left: 20px;
 }
-nav a:hover{
+nav a:hover {
     color: #34bf49 !important;
-} 
-nav{
+}
+nav {
     position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
-.imggg{
-    width: 145.99px;
-    height: 499.18px;
+/* Button styles */
+.btn {
+    background-color: #34bf49;
+    color: #ffffff;
+    border-radius: 40px;
 }
-h2{
-    color: #2d465e;
-}
-.btn{
-background-color: #34bf49;
-color: #ffffff;
-border-radius: 40px;
-}
-.btn:hover{
+.btn:hover {
     background-color: #ffffff;
     color: #34bf49;
 }
 
-.imgn{
-    width: 526px;
-    height: 631.2px;
+/* Carousel images */
+.imggg {
+    width: 100%;
+    height: auto;
 }
 
-
+/* Statistics section */
 .stats-container {
     display: flex;
     gap: 40px;
     padding: 20px;
     border-radius: 10px;
 }
-
 .stat-item {
     text-align: center;
 }
-
 .stat-item h1 {
     font-size: 2.5rem;
     margin: 0;
     color: #333;
 }
-
 .stat-item p {
     font-size: 1.2rem;
     color: #666;
     margin: 5px 0 0;
     position: relative;
 }
-
 .stat-item p::before {
     content: '';
     width: 40px;
     height: 2px;
-    background-color: #00c853; /* Green underline */
+    background-color: #00c853;
     position: absolute;
     top: -10px;
     left: 0;
     right: 0;
 }
 
-.imggh img{
-    width: 415px;
-    height: 291.19px;
+/* Blog section */
+.imggh img {
+    width: 100%;
+    height: auto;
     border-radius: 20px;
     padding-bottom: 15px;
 }
-.imggh{
-    padding-left: 100px;
+.imggh {
+    padding: 20px;
 }
-.imggh a{
+.imggh a {
     font-size: large;
     font-weight: bolder;
 }
-
-\ .pricing-table {
+.pricing-table {
     padding: 2rem;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -143,4 +134,97 @@ border-radius: 40px;
 .btn-buy {
     border-radius: 30px;
     padding: 0.5rem 2rem;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-nav .nav-item {
+        margin: 0 10px;
+    }
+
+    /* Hero section */
+    .hone {
+        padding: 20px;
+        padding-top: 120px;
+    }
+
+    /* Carousel image adjustments */
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* About section */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Technology and Why Us sections */
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .stat-item h1 {
+        font-size: 2rem;
+    }
+    .stat-item p {
+        font-size: 1rem;
+    }
+
+    /* Recent Posts section */
+    .imggh {
+        padding: 10px;
+    }
+    .imggh img {
+        width: 100%;
+    }
+
+    /* Pricing table adjustments */
+    .pricing-table {
+        padding: 15px;
+    }
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    /* Navbar adjustments */
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    /* Hero text adjustments */
+    .hone h2 {
+        font-size: 1.5rem;
+    }
+    .hone p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust button size */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* About section */
+    .container p, .container h2 {
+        font-size: 1rem;
+    }
+
+    /* Statistics section */
+    .stat-item h1 {
+        font-size: 1.5rem;
+    }
+    .stat-item p {
+        font-size: 0.9rem;
+    }
 }
